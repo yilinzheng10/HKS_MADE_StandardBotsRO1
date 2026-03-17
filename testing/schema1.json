@@ -1,0 +1,223 @@
+{
+  "globals": {
+    "globalSpace": [
+      {
+        "id": "space-home",
+        "name": "Home",
+        "type": "SinglePosition",
+        "isGlobal": true
+      },
+      {
+        "id": "space-left",
+        "name": "LeftOffset",
+        "type": "SinglePosition",
+        "isGlobal": true
+      },
+      {
+        "id": "space-right",
+        "name": "RightOffset",
+        "type": "SinglePosition",
+        "isGlobal": true
+      }
+    ],
+    "globalVariables": [
+      {
+        "id": "var-hand-state",
+        "name": "hand_state",
+        "type": "string",
+        "initialValue": "NONE",
+        "isGlobal": true
+      },
+      {
+        "id": "var-hand-confidence",
+        "name": "hand_confidence",
+        "type": "number",
+        "initialValue": 0.0,
+        "isGlobal": true
+      },
+      {
+        "id": "var-motion-command",
+        "name": "motion_command",
+        "type": "string",
+        "initialValue": "STOP",
+        "isGlobal": true
+      },
+      {
+        "id": "var-vision-ok",
+        "name": "vision_ok",
+        "type": "boolean",
+        "initialValue": false,
+        "isGlobal": true
+      },
+      {
+        "id": "var-last-seen-ms",
+        "name": "last_seen_ms",
+        "type": "number",
+        "initialValue": 0,
+        "isGlobal": true
+      }
+    ]
+  },
+  "routine": {
+    "motionPlanner": "ROS2",
+    "steps": [
+      {
+        "id": "step-home",
+        "stepKind": "MoveArm"
+      },
+      {
+        "id": "step-monitor",
+        "stepKind": "RunInBackground"
+      },
+      {
+        "id": "step-main-loop",
+        "stepKind": "Loop"
+      }
+    ],
+    "stepConfigurations": {
+      "step-home": {
+        "args": {
+          "argumentKind": "MoveArm",
+          "targetSpaceId": "space-home",
+          "motionType": "joint"
+        }
+      },
+      "step-monitor": {
+        "args": {
+          "argumentKind": "RunInBackground",
+          "steps": [
+            {
+              "id": "bg-loop",
+              "stepKind": "Loop"
+            }
+          ]
+        }
+      },
+      "bg-loop": {
+        "args": {
+          "argumentKind": "Loop",
+          "times": null,
+          "condition": "vision_ok == true"
+        },
+        "children": [
+          {
+            "id": "bg-read-vision",
+            "stepKind": "ExternalInput"
+          },
+          {
+            "id": "bg-map-command",
+            "stepKind": "Condition"
+          },
+          {
+            "id": "bg-wait",
+            "stepKind": "Wait"
+          }
+        ]
+      },
+      "bg-read-vision": {
+        "args": {
+          "argumentKind": "ExternalInput",
+          "source": "mediapipe_hand_service",
+          "fields": [
+            "hand_state",
+            "hand_confidence",
+            "vision_ok",
+            "last_seen_ms"
+          ]
+        }
+      },
+      "bg-map-command": {
+        "args": {
+          "argumentKind": "Condition",
+          "branches": [
+            {
+              "if": "hand_state == 'OPEN' && hand_confidence >= 0.85",
+              "set": {
+                "motion_command": "MOVE_LEFT"
+              }
+            },
+            {
+              "if": "hand_state == 'CLOSED' && hand_confidence >= 0.85",
+              "set": {
+                "motion_command": "MOVE_RIGHT"
+              }
+            },
+            {
+              "if": "hand_state == 'NONE' || hand_confidence < 0.85",
+              "set": {
+                "motion_command": "STOP"
+              }
+            }
+          ]
+        }
+      },
+      "bg-wait": {
+        "args": {
+          "argumentKind": "Wait",
+          "durationMs": 100
+        }
+      },
+      "step-main-loop": {
+        "args": {
+          "argumentKind": "Loop",
+          "times": null,
+          "condition": "true"
+        },
+        "children": [
+          {
+            "id": "main-check",
+            "stepKind": "Condition"
+          },
+          {
+            "id": "main-wait",
+            "stepKind": "Wait"
+          }
+        ]
+      },
+      "main-check": {
+        "args": {
+          "argumentKind": "Condition",
+          "branches": [
+            {
+              "if": "motion_command == 'MOVE_LEFT'",
+              "gotoStepId": "step-move-left"
+            },
+            {
+              "if": "motion_command == 'MOVE_RIGHT'",
+              "gotoStepId": "step-move-right"
+            },
+            {
+              "if": "motion_command == 'STOP'",
+              "gotoStepId": "step-stop"
+            }
+          ]
+        }
+      },
+      "step-move-left": {
+        "args": {
+          "argumentKind": "MoveArm",
+          "targetSpaceId": "space-left",
+          "motionType": "linear"
+        }
+      },
+      "step-move-right": {
+        "args": {
+          "argumentKind": "MoveArm",
+          "targetSpaceId": "space-right",
+          "motionType": "linear"
+        }
+      },
+      "step-stop": {
+        "args": {
+          "argumentKind": "StopMotion"
+        }
+      },
+      "main-wait": {
+        "args": {
+          "argumentKind": "Wait",
+          "durationMs": 50
+        }
+      }
+    }
+  }
+}

@@ -12,7 +12,9 @@
             <AllowMulticast>spdp</AllowMulticast>
             <Interfaces>
                 <!-- ****change to the device name of the network adapter you want to use -->
-                <NetworkInterface name="ethernet0" priority="0" presence_required="true" />
+                
+                <!-- run "Get-NetAdapter | Select-Object Name, Status, InterfaceDescription" on terminal to find "name" -->
+                <NetworkInterface name="Wi-Fi" priority="0" presence_required="true" />
             </Interfaces>
         </General>
         <Discovery>

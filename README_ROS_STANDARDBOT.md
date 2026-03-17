@@ -14,7 +14,7 @@ Sample code to call the ROS2 APIs.  By default we use cyclone dds implementation
 
 # Client Setup
 
-Next, we set up the client side to talk to the robot.  First you'll need to setup a machine on the same network that the robot is currently on.  Ethernet is preferred, but wifi will work as well.
+Next, we set up the client side to talk to the robot.  First you'll need to setup a machine on the *same network* that the robot is currently on.  Ethernet is preferred, but wifi will work as well.
 
 Next, we require docker to run the sample code.  We use docker to set up the ROS environment so that it can communication over the ROS2 protocols
 
