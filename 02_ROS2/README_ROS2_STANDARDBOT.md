@@ -8,7 +8,7 @@ Sample code to call the ROS2 APIs.  By default we use cyclone dds implementation
    - Click menu -> Settings -> Configure Developer API
    - If "Configure Developer API" is missing, reach out to Standard Bots and we can enable it for you.
    - Turn the `Enable Developer API` on.  This enables the python / REST API
-   - Turn the `Enable ROS2 bridge` on.  This enables the ROS2 topics to be published on the local network
+   - Turn the `Enable ROS2 bridge` on.  This enables the ROS2 topics to be published on the local network.
    - ![image](https://github.com/user-attachments/assets/9d84639b-19e9-4fdf-a0d2-6564e592f56b)
 
 

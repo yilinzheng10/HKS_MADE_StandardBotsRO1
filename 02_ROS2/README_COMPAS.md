@@ -30,7 +30,6 @@ https://compas.dev/#/gettingstarted
 grasshopper interop:
 https://github.com/compas-dev/tutorials/blob/main/fastapi/README.md
 
-
 References:
 https://forum.vention.io/t/understanding-movej-vs-movel-in-robot-programming/462
 
@@ -38,7 +37,15 @@ https://forum.vention.io/t/understanding-movej-vs-movel-in-robot-programming/462
 ip address
 command line: ipconfig
 
-dependencies
+network interface name
+command line: Get-NetAdapter | Select-Object Name, Status, InterfaceDescription
+**************************************
+ROS2 Bridge over LAN
+1. ping IP address of the robot before testing the robot
+2. 
+
+*************************************
+dependencies for Compass
 1. conda
 2. python
 

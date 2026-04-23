@@ -1,0 +1,91 @@
+{
+  "HKS_LINE_comment": "Code setup manually in native StandardBots UI with simple movements.",
+  "globals": {
+    "globalSpace": [],
+    "globalVariables": []
+  },
+  "routine": {
+    "motionPlanner": "ROS2",
+    "steps": [
+      {
+        "id": "034ffdeb-6048-42be-826c-cf73f54c318c",
+        "stepKind": "Loop",
+        "steps": [
+          {
+            "id": "cb84b8fc-d648-479c-ae2e-ad1380b7ef5c",
+            "stepKind": "MoveArmToV2",
+            "steps": [
+              {
+                "id": "445d4dc0-3ec3-4e73-98ef-2b2ac1fa0157",
+                "stepKind": "Waypoint"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stepConfigurations": {
+      "034ffdeb-6048-42be-826c-cf73f54c318c": {
+        "args": {
+          "argumentKind": "Loop",
+          "times": null,
+          "condition": null
+        }
+      },
+      "cb84b8fc-d648-479c-ae2e-ad1380b7ef5c": {
+        "args": {
+          "argumentKind": "MoveArmToV2",
+          "motionSpeed": {
+            "motionSpeedPercent": 36
+          },
+          "speedLimitOption": "NO_MOTION_LIMITS"
+        }
+      },
+      "445d4dc0-3ec3-4e73-98ef-2b2ac1fa0157": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -2.185703992843628,
+              -0.12844692170619965,
+              0.9677816033363342,
+              0.6158528327941895,
+              4.760072708129883,
+              1.703950047492981
+            ],
+            "pose": {
+              "w": 0.2155219711764594,
+              "i": -0.6602699725599379,
+              "j": 0.2978826826569437,
+              "k": 0.6548738433080187,
+              "x": -0.12382018053733027,
+              "y": -0.5254356118955995,
+              "z": 0.9816074957308485
+            },
+            "tcpOption": "wrist"
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      }
+    }
+  }
+}

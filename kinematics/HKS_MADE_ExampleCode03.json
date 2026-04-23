@@ -1,0 +1,369 @@
+{
+    "HKS_LINE_comment": "Code setup manually in native StandardBots UI with simple movements.",
+  "globals": {
+    "globalSpace": [],
+    "globalVariables": []
+  },
+  "routine": {
+    "motionPlanner": "ROS2",
+    "steps": [
+      {
+        "id": "800c58c2-b24c-4bbe-b6c9-50a1e4a6e1bf",
+        "stepKind": "MoveArmToV2",
+        "steps": [
+          {
+            "id": "7e9de639-3065-4f09-8016-b39403839fdf",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "18f13d4a-ab79-4393-8ede-db44f308d5a1",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "2a59a4d7-a316-4ec0-b654-840641a230aa",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "01ec27a8-ec79-4d14-8466-90b6baa29271",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "64ab5663-fed0-45f7-8a63-f3a79593a46b",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "c29dfb7a-2801-4052-8861-7b6feec054e5",
+            "stepKind": "Waypoint"
+          }
+        ]
+      }
+    ],
+    "stepConfigurations": {
+      "800c58c2-b24c-4bbe-b6c9-50a1e4a6e1bf": {
+        "args": {
+          "argumentKind": "MoveArmToV2",
+          "motionSpeed": {
+            "customLimits": null,
+            "motionSpeedPercent": 100
+          },
+          "speedLimitOption": "NO_MOTION_LIMITS"
+        }
+      },
+      "7e9de639-3065-4f09-8016-b39403839fdf": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -0.5706108808517456,
+              0.5027621984481812,
+              1.5837408304214478,
+              -0.5846084952354431,
+              4.688117980957031,
+              -2.0523390769958496
+            ],
+            "pose": {
+              "w": 0.5156537204392152,
+              "i": -0.5025501682639463,
+              "j": 0.5263634117901521,
+              "k": 0.45220142381875156,
+              "x": 0.8802835709651139,
+              "y": -0.33994253198721525,
+              "z": 0.2672421479698469
+            },
+            "tcpOption": "wrist"
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "18f13d4a-ab79-4393-8ede-db44f308d5a1": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              0.2125387340784073,
+              0.3002198040485382,
+              1.4432392120361328,
+              -0.48232609033584595,
+              4.925022125244141,
+              -2.5467495918273926
+            ],
+            "pose": {
+              "w": 0.22731286046363186,
+              "i": -0.755398102746482,
+              "j": 0.012806814948044587,
+              "k": 0.6144416614502499,
+              "x": 0.8394321838795462,
+              "y": 0.4147287164495017,
+              "z": 0.5364608911754374
+            },
+            "tcpOption": "wrist",
+            "wristPose": {
+              "w": 0.22731286046363186,
+              "i": -0.755398102746482,
+              "j": 0.012806814948044587,
+              "k": 0.6144416614502499,
+              "x": 0.8394321838795462,
+              "y": 0.4147287164495017,
+              "z": 0.5364608911754374
+            }
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "2a59a4d7-a316-4ec0-b654-840641a230aa": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -0.9096880555152893,
+              -0.20621705055236816,
+              2.011469841003418,
+              -0.43526706099510193,
+              5.980441093444824,
+              -3.0338828563690186
+            ],
+            "pose": {
+              "w": 0.5998480693343886,
+              "i": -0.7300175931540349,
+              "j": -0.11908549882517919,
+              "k": 0.3050823681744912,
+              "x": 0.6266859504995713,
+              "y": -0.23562836183736957,
+              "z": 0.6045244953683677
+            },
+            "tcpOption": "wrist",
+            "wristPose": {
+              "w": 0.5998480693343886,
+              "i": -0.7300175931540349,
+              "j": -0.11908549882517919,
+              "k": 0.3050823681744912,
+              "x": 0.6266859504995713,
+              "y": -0.23562836183736957,
+              "z": 0.6045244953683677
+            }
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "01ec27a8-ec79-4d14-8466-90b6baa29271": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -0.5221901535987854,
+              -0.20570772886276245,
+              2.4085161685943604,
+              -0.5441437363624573,
+              4.932284355163574,
+              -4.2303009033203125
+            ],
+            "pose": {
+              "w": 0.11946979412702116,
+              "i": 0.7058784741947511,
+              "j": 0.2686842932191145,
+              "k": -0.644415470435869,
+              "x": 0.5113907634971449,
+              "y": -0.030905966259613366,
+              "z": 0.25526730621202265
+            },
+            "tcpOption": "wrist",
+            "wristPose": {
+              "w": 0.11946979412702116,
+              "i": 0.7058784741947511,
+              "j": 0.2686842932191145,
+              "k": -0.644415470435869,
+              "x": 0.5113907634971449,
+              "y": -0.030905966259613366,
+              "z": 0.25526730621202265
+            }
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "64ab5663-fed0-45f7-8a63-f3a79593a46b": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -1.2705914974212646,
+              -0.47919073700904846,
+              2.391998767852783,
+              -0.3101562261581421,
+              4.459566593170166,
+              -6.077294826507568
+            ],
+            "pose": {
+              "w": 0.46214230650678,
+              "i": 0.39565194802230486,
+              "j": 0.5782238881015238,
+              "k": -0.5436369742682203,
+              "x": 0.2609466728860109,
+              "y": -0.3280472682390848,
+              "z": 0.35183570587893137
+            },
+            "tcpOption": "wrist",
+            "wristPose": {
+              "w": 0.46214230650678,
+              "i": 0.39565194802230486,
+              "j": 0.5782238881015238,
+              "k": -0.5436369742682203,
+              "x": 0.2609466728860109,
+              "y": -0.3280472682390848,
+              "z": 0.35183570587893137
+            }
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "c29dfb7a-2801-4052-8861-7b6feec054e5": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -0.6344583630561829,
+              0.4495462477207184,
+              1.190241813659668,
+              0.19733074307441711,
+              3.583512544631958,
+              -6.089848518371582
+            ],
+            "pose": {
+              "w": 0.40007780133175075,
+              "i": -0.1614584147503875,
+              "j": 0.7216071118087212,
+              "k": -0.5414352310063688,
+              "x": 0.7791256143211625,
+              "y": -0.5146445607815936,
+              "z": 0.5617198366752767
+            },
+            "tcpOption": "wrist",
+            "wristPose": {
+              "w": 0.40007780133175075,
+              "i": -0.1614584147503875,
+              "j": 0.7216071118087212,
+              "k": -0.5414352310063688,
+              "x": 0.7791256143211625,
+              "y": -0.5146445607815936,
+              "z": 0.5617198366752767
+            }
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "inch",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      }
+    }
+  }
+}

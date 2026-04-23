@@ -1,0 +1,361 @@
+{
+  "HKS_LINE_comment": "Code setup manually in native StandardBots UI with simple movements. Gripper testing.",
+  "globals": {
+    "globalSpace": [],
+    "globalVariables": []
+  },
+  "routine": {
+    "motionPlanner": "ROS2",
+    "space": [
+      {
+        "description": "",
+        "id": "2343f28a-49c2-46cf-8df7-fdf545cdc66b",
+        "kind": "plane",
+        "name": "Test-02",
+        "positions": [
+          {
+            "jointAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pose": {
+              "w": 1,
+              "i": 0,
+              "j": 0,
+              "k": 0,
+              "x": -0.10359242809342117,
+              "y": -0.6723281816826436,
+              "z": -0.38883629043513285
+            }
+          },
+          {
+            "jointAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pose": {
+              "w": 1,
+              "i": 0,
+              "j": 0,
+              "k": 0,
+              "x": 0.19626955547743213,
+              "y": -0.6717271143217651,
+              "z": -0.37975721961367903
+            }
+          },
+          {
+            "jointAngles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "pose": {
+              "w": 1,
+              "i": 0,
+              "j": 0,
+              "k": 0,
+              "x": -0.1045504147761346,
+              "y": -0.3725616559955854,
+              "z": -0.37704170103888945
+            }
+          }
+        ],
+        "global": false,
+        "capturedWithCameraKind": "wristCamera",
+        "calibrationEntries": [],
+        "calibrationCameraSettings": {
+          "kind": "wristCamera",
+          "name": "Wrist Camera",
+          "brightness": 0,
+          "contrast": 50,
+          "exposure": 350,
+          "sharpness": 50,
+          "hue": 0,
+          "whiteBalance": 4600,
+          "autoWhiteBalance": true
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "b9841b81-dbc8-4fbc-afbb-5959a947c263",
+        "stepKind": "MoveArmToV2",
+        "steps": [
+          {
+            "id": "db8858cb-d8fd-43fc-b5ec-c95d8cf31ee4",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "b50f21a7-998c-44b1-a53a-b32d6572b5a6",
+            "stepKind": "Waypoint"
+          },
+          {
+            "id": "736a067d-5aef-432d-828b-b471dd1b9195",
+            "stepKind": "Waypoint"
+          }
+        ]
+      },
+      {
+        "id": "c425aad6-9756-4224-946e-9a2602765f5c",
+        "stepKind": "ActuateGripper"
+      },
+      {
+        "id": "58e03d5c-6038-47f0-a481-da13f09fa68d",
+        "stepKind": "ActuateGripper"
+      },
+      {
+        "id": "daae6657-1346-457a-93a8-b809eb8dbffb",
+        "stepKind": "MoveArmToV2",
+        "steps": [
+          {
+            "id": "a53fb259-9896-409b-8c8d-e447b4e33e18",
+            "stepKind": "Waypoint"
+          }
+        ]
+      }
+    ],
+    "stepConfigurations": {
+      "b9841b81-dbc8-4fbc-afbb-5959a947c263": {
+        "args": {
+          "argumentKind": "MoveArmToV2",
+          "motionSpeed": {
+            "customLimits": null,
+            "motionSpeedPercent": 100
+          },
+          "speedLimitOption": "NO_MOTION_LIMITS"
+        }
+      },
+      "db8858cb-d8fd-43fc-b5ec-c95d8cf31ee4": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -1.575637936592102,
+              0.06377105414867401,
+              2.2553441524505615,
+              -1.7542972564697266,
+              4.718468189239502,
+              3.145691156387329
+            ],
+            "pose": {
+              "w": 0.19968523004591457,
+              "i": -0.6776170669334362,
+              "j": 0.679738577139557,
+              "k": 0.19727236565299378,
+              "x": 0.19159248778222066,
+              "y": -0.660653405598384,
+              "z": 0.4276398185725354
+            },
+            "tcpOption": "wrist"
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": false,
+          "stopHereRaw": false,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": true,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "meter",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "b50f21a7-998c-44b1-a53a-b32d6572b5a6": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -1.8866705894470215,
+              0.5369517207145691,
+              2.382793426513672,
+              -1.3500664234161377,
+              4.721715927124023,
+              1.2269090414047241
+            ],
+            "pose": {
+              "w": 0.009922563004418461,
+              "i": 0.7082780416466689,
+              "j": 0.011326120392453454,
+              "k": -0.7057729645299822,
+              "x": 0.005920573999752319,
+              "y": -0.6064506849449004,
+              "z": -0.019105205834300476
+            },
+            "tcpOption": "wrist"
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": false,
+          "stopHereRaw": false,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "meter",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "736a067d-5aef-432d-828b-b471dd1b9195": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -1.8863499164581299,
+              0.6527147889137268,
+              2.3717784881591797,
+              -1.4545073509216309,
+              4.721410274505615,
+              1.2267053127288818
+            ],
+            "pose": {
+              "w": 0.00987078472969937,
+              "i": 0.7083622206843623,
+              "j": 0.011504206352706658,
+              "k": -0.7056863220667758,
+              "x": 0.005999308695121004,
+              "y": -0.6062465717803869,
+              "z": -0.06740751717211252
+            },
+            "tcpOption": "wrist"
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "meter",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      },
+      "c425aad6-9756-4224-946e-9a2602765f5c": {
+        "args": {
+          "argumentKind": "ActuateGripper",
+          "selectedGripper": "primary",
+          "diameterMM": 71,
+          "forceNewtons": 45,
+          "gripKind": "inward",
+          "payloadKg": 5,
+          "targetDiameterToleranceMeters": 0.003,
+          "waitForGripToContinue": false,
+          "isFlexGrip": false,
+          "forcePercent": 0.5,
+          "stopRoutineOnFailure": false
+        }
+      },
+      "58e03d5c-6038-47f0-a481-da13f09fa68d": {
+        "args": {
+          "argumentKind": "ActuateGripper",
+          "selectedGripper": "primary",
+          "diameterMM": 33,
+          "forceNewtons": 45,
+          "gripKind": "inward",
+          "payloadKg": 5,
+          "targetDiameterToleranceMeters": 0.003,
+          "waitForGripToContinue": false,
+          "isFlexGrip": false,
+          "forcePercent": 0.5,
+          "stopRoutineOnFailure": false
+        }
+      },
+      "daae6657-1346-457a-93a8-b809eb8dbffb": {
+        "args": {
+          "argumentKind": "MoveArmToV2",
+          "motionSpeed": {
+            "customLimits": null,
+            "motionSpeedPercent": 100
+          },
+          "speedLimitOption": "NO_MOTION_LIMITS"
+        }
+      },
+      "a53fb259-9896-409b-8c8d-e447b4e33e18": {
+        "args": {
+          "argumentKind": "Waypoint",
+          "shouldMatchJointAngles": true,
+          "motionKind": "joint",
+          "motionKindRaw": "joint",
+          "speedLimitOption": "PARENT_DEFAULTS",
+          "positionListID": null,
+          "target": {
+            "jointAngles": [
+              -1.8322876691818237,
+              -0.19503876566886902,
+              1.8488214015960693,
+              -0.7251983880996704,
+              4.839432239532471,
+              2.9754133224487305
+            ],
+            "pose": {
+              "w": 0.3212997828427266,
+              "i": -0.6146835742907097,
+              "j": 0.6507911611522946,
+              "k": 0.3088711990595154,
+              "x": 0.03965043116675415,
+              "y": -0.6840157240512019,
+              "z": 0.6673802368883223
+            },
+            "tcpOption": "wrist"
+          },
+          "tcpOption": "auto",
+          "targetKind": "singlePosition",
+          "stopHere": true,
+          "stopHereRaw": true,
+          "blendConfig": {
+            "kind": "blendRadius",
+            "radius": 0
+          },
+          "useParentBlendConfig": false,
+          "moveDynamicBaseToReachPosition": true,
+          "distanceUnit": "meter",
+          "relativeConfig": {
+            "targetKind": "singlePosition",
+            "frame": "base"
+          }
+        }
+      }
+    }
+  }
+}
