@@ -10,7 +10,7 @@ This repository documents the computational + robotic workflow for controlling t
 
 ## Documentation
 
-- [System Architecture](01_system_architecture\SYSTEM.md)
+- [System Architecture](01_system_architecture/SYSTEM.md)
 - [Resources](RESOURCES.md)
 - [Example Kinematics](kinematics)
-- [Control Interfaces (ROS2)](02_ROS2\README_ROS2_STANDARDBOT.md)
+- [Control Interfaces (ROS2)](02_ROS2/README_ROS2_STANDARDBOT.md)
