@@ -5,7 +5,7 @@ This repository documents the computational + robotic workflow for controlling t
 - Grasshopper / Rhino (geometry + toolpaths)
 - COMPAS (IK)
 - Python (middleware)
-- ROS2 (real-time communication)
+- ROS2 (folked from StandardBots realtime API documentation)
 - StandardOS / REST API
 
 ## Documentation
