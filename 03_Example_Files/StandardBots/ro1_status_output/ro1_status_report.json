@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-05-30T14:22:00",
+  "robot_url": "https://cb2347.sb.app",
+  "status": {
+    "health": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "health": "ok",
+        "build": {
+          "id": "build_0sapi_tojPM6OKmf3N1nIfAROr",
+          "name": "release/2025.08.01.44"
+        }
+      }
+    },
+    "control_mode": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "kind": "routine_editor"
+      }
+    },
+    "brakes_state": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "state": "disengaged"
+      }
+    },
+    "arm_combined_position": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "joint_rotations": [
+          -5.179850101470947,
+          -1.06020987033844,
+          -0.8954657912254333,
+          0.6435753703117371,
+          -4.621614456176758,
+          -0.44582363963127136
+        ],
+        "tooltip_position": {
+          "axis_alignment": null,
+          "reference_frame": "base",
+          "local_accuracy_calibration": null,
+          "position": {
+            "unit_kind": "meters",
+            "x": -0.7038789925360411,
+            "y": -1.0008925204569752,
+            "z": 0.13745353985403716
+          },
+          "orientation": {
+            "kind": "quaternion",
+            "quaternion": {
+              "x": 0.42001442571203634,
+              "y": 0.43490639437404993,
+              "z": -0.5750506227894115,
+              "w": 0.5511452544981786
+            }
+          }
+        }
+      }
+    },
+    "joints_position": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "pose": {
+          "j0": -5.179850101470947,
+          "j1": -1.06020987033844,
+          "j2": -0.8954657912254333,
+          "j3": 0.6435753703117371,
+          "j4": -4.621614456176758,
+          "j5": -0.44582363963127136
+        }
+      }
+    },
+    "tooltip_position": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "pose": {
+          "x": -0.7038789925360411,
+          "y": -1.0008925204569752,
+          "z": 0.13745353985403716,
+          "i": 0.42001442571203634,
+          "j": 0.43490639437404993,
+          "k": -0.5750506227894115,
+          "w": 0.5511452544981786
+        }
+      }
+    },
+    "flange_position": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "pose": {
+          "x": -0.7038789925360411,
+          "y": -1.0008925204569752,
+          "z": 0.13745353985403716,
+          "i": 0.42001442571203634,
+          "j": 0.43490639437404993,
+          "k": -0.5750506227894115,
+          "w": 0.5511452544981786
+        }
+      }
+    },
+    "joints_state": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "J0": {
+          "braked": false,
+          "connectionStatus": "ready",
+          "inCollision": false,
+          "disturbance": {
+            "disturbance": 10.54637622833252,
+            "amperageDisturbance": 10.54637622833252,
+            "windupDisturbance": 0.8984375
+          }
+        },
+        "J1": {
+          "braked": false,
+          "connectionStatus": "ready",
+          "inCollision": false,
+          "disturbance": {
+            "disturbance": -17.929655075073242,
+            "amperageDisturbance": -17.929655075073242,
+            "windupDisturbance": -1.9938642978668213
+          }
+        },
+        "J2": {
+          "braked": false,
+          "connectionStatus": "ready",
+          "inCollision": false,
+          "disturbance": {
+            "disturbance": -0.7956122159957886,
+            "amperageDisturbance": -0.7956122159957886,
+            "windupDisturbance": -2.8917272090911865
+          }
+        },
+        "J3": {
+          "braked": false,
+          "connectionStatus": "ready",
+          "inCollision": false,
+          "disturbance": {
+            "disturbance": 0.27971208095550537,
+            "amperageDisturbance": 0.27971208095550537,
+            "windupDisturbance": -1.1683670282363892
+          }
+        },
+        "J4": {
+          "braked": false,
+          "connectionStatus": "ready",
+          "inCollision": false,
+          "disturbance": {
+            "disturbance": 1.1840806007385254,
+            "amperageDisturbance": 1.1840806007385254,
+            "windupDisturbance": -3.2881572246551514
+          }
+        },
+        "J5": {
+          "braked": false,
+          "connectionStatus": "ready",
+          "inCollision": false,
+          "disturbance": {
+            "disturbance": 2.854576349258423,
+            "amperageDisturbance": 2.854576349258423,
+            "windupDisturbance": -0.8032071590423584
+          }
+        }
+      }
+    },
+    "camera_status": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "connected": true,
+        "message": "Camera is connected"
+      }
+    },
+    "connected_cameras": {
+      "ok": false,
+      "status": 500,
+      "data": {
+        "error": "internal_server_error",
+        "message": "Failed to get connected cameras"
+      },
+      "error_note": "SDK request returned non-200 status."
+    },
+    "camera_intrinsics_color": {
+      "ok": true,
+      "status": 200,
+      "data": {
+        "width": 1280.0,
+        "height": 720.0,
+        "fx": 911.9456787109375,
+        "fy": 909.5457763671875,
+        "ppx": 649.55810546875,
+        "ppy": 349.06329345703125,
+        "error": null
+      }
+    },
+    "camera_frame": {
+      "ok": false,
+      "note": "No enabled camera id found from connected camera list."
+    }
+  }
+}
